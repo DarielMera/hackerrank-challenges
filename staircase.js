@@ -1,3 +1,5 @@
+//from hacker rank - StairCase
+
 const n = 6
 let symbol = ''
 let emptySpace = ' '

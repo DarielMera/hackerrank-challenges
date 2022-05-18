@@ -27,7 +27,7 @@ console.log (diagonalDifference(arr))
 
 /* ----------------what do I think I should do to solve this problem
 1. the key here is the arr.length property
-    a. I determine thee size of the metrix
+    a. I determine the size of the matrix
     b. 3 columns 3 rows
 
 2. I need the first number of first column and first row
