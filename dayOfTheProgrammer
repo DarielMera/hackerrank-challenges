@@ -1,0 +1,25 @@
+// from hacker rank - Day Of The Programmer 
+
+function dayOfProgrammer(year) {
+        let month = 9
+    let dayOfTheProgrammer = 256 
+    
+    if(year >=1700  && year <= 1917 ){
+        let isYearleap = (year % 4 === 0) ? 244 : 243  
+        dayOfTheProgrammer = dayOfTheProgrammer - isYearleap 
+    }
+    
+    if (year >= 1919 && year <=2700){
+      let isYearleap = (year % 400 === 0) ? 244 : (year % 4 === 0 && year % 100 !== 0) ? 244 : 243 
+       
+      dayOfTheProgrammer = dayOfTheProgrammer - isYearleap
+        console.log(isYearleap) 
+    } 
+
+    if (year === 1918){
+        dayOfTheProgrammer = dayOfTheProgrammer - (243 - 13)
+    }
+
+return dayOfTheProgrammer + '.' + '0' + month + '.' + year  
+
+}
