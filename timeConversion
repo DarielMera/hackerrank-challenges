@@ -1,0 +1,33 @@
+// from Hacker Rank - Time Conversion
+
+let regularTime = '01:06:45am'
+
+function timeConversion(s) {
+    s = s.toUpperCase()
+    const extractedHour = s.slice(0,2)
+    if(s.charAt(extractedHour.length-1) === ":"){
+        s = '0' + s
+        console.log(s)
+    }
+    let isAm = s.endsWith('AM')
+    let isPm = s.endsWith('PM')
+    s = s.slice(0,s.length-2)
+if(isAm){
+console.log(s)
+    if(s.startsWith('12')){
+        return s.replace('12', '00') 
+    } else {
+        return s
+    }
+} else if(isPm) {
+    if(s.startsWith('12')){
+         return s
+     }
+    const extractedPmHour = s.slice(0,2)
+        const MilitaryHour = s.replace(extractedPmHour, Number(extractedPmHour)+12)        
+         return MilitaryHour.toString()
+     } else {
+         return '!Please check your time format'
+     }
+}
+console.log(timeConversion(regularTime))
