@@ -1,0 +1,38 @@
+// from Codility - Total Needed For Same Size Blocks
+
+//const S = "babaa" // returns 3
+// const S = "bbbab" // returns 4
+const S = "bbbaaabbb" // returns 0
+
+function solution(S) {
+	let arr = []
+	let arrr = []
+	let i = null
+	for (i = 0; i < S.length; i++) {
+		if (S[i] != S[i + 1]) {
+			arr.push([S[i]])
+		} else {
+			if (S[i] === S[i + 1]) {
+				let last = (arr[arr.length] = [])
+				for (; i < S.length; i++) {
+					last.push(S[i])
+					if (S[i] != S[i + 1]) {
+						break
+					}
+				}
+			}
+		}
+	}
+
+	for (let ar of arr) {
+		arrr.push(ar.length)
+	}
+	let max = Math.max(...arrr)
+	let newArrr = arrr.map(elem => {
+		return max - elem
+	})
+
+	let totalNeededForSameSizeBlocks = newArrr.reduce((acc, elem) => acc + elem)
+	return totalNeededForSameSizeBlocks
+}
+console.log(solution(S))
