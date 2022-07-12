@@ -1,0 +1,7 @@
+function aVeryBigSum(ar) {
+    let result = 0
+for (let num of ar){
+    result += num
+}
+    return result
+}
