@@ -1,4 +1,4 @@
-//from hacker rank - StairCase
+//from hacker rank - StairCase Solution
 
 const n = 6
 let symbol = ''
