@@ -1,0 +1,31 @@
+// from Hacker Rank - Apple and Oranges
+
+const s = 7
+const t = 11
+const a = 5
+const b = 15
+const apples = [-2,2,1]
+const oranges = [5, -6]
+
+function countApplesAndOranges(s,t,a,b,apples, oranges) {
+    let numberOfApplesThatFellOnHouse = 0
+    let numberOfOrangesThatFellOnHouse = 0
+
+    for (let applePosition of apples){
+        let didAppleFellOnHouse = a + applePosition 
+        if (didAppleFellOnHouse >= s && didAppleFellOnHouse <= t){
+             numberOfApplesThatFellOnHouse++
+        }
+    }
+
+    for (let orangePosition of oranges){
+        let didOrangeFellOnHouse = b + orangePosition 
+        if (didOrangeFellOnHouse >= s && didOrangeFellOnHouse <= t){
+             numberOfOrangesThatFellOnHouse++
+        }
+    }
+    console.log(numberOfApplesThatFellOnHouse)
+    console.log(numberOfOrangesThatFellOnHouse)
+    
+}
+console.log(countApplesAndOranges(s,t,a,b,apples, oranges))
