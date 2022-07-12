@@ -1,3 +1,5 @@
+// from HackerRank CompareTheTriplets
+
 function compareTriplets(a, b) {
     let aliceScore = 0;
     let bobScore = 0;
