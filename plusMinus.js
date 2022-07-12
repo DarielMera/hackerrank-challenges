@@ -1,3 +1,5 @@
+// from hacker rank - Plus Minus
+
 arr = [1, 1, 0, -1, -1]
 
 function plusMinus(arr) {
@@ -19,22 +21,6 @@ function plusMinus(arr) {
 	    }
 	}
 
-	// for (let i = 0; i < arr.length; i++) {
-
-	// 	if (arr[i] === 0) {
-	// 		zeroRatios += 1
-	// 	}
-
-	// 	if (arr[i] < 0) {
-	// 		negativeRatios += 1
-	// 	}
-
-	// 	if (arr[i] > 0) {
-	// 		positiveRatios += 1
-	// 	}
-
-	// }
-
 	console.log(negativeRatios)
 	console.log(zeroRatios)
 
@@ -48,20 +34,3 @@ function plusMinus(arr) {
 }
 
 plusMinus(arr)
-
-/* 
-- loop trhough the array
-- add the numbers that are less than 0
-- add the numbers that are greater than zero
-
-
-
-1. determine how many positive numbers 
-2. devide the number of positive by the total of array
-    a. use array.length
-3. print the result of dividing the numbers positive, negative and zero
-    Print
-    Print the ratios of positive, negative and zero values in the array. 
-    Each value should be printed on a separate line with 6  digits after the decimal. 
-    The function should not return a value.
-*/
