@@ -1,0 +1,15 @@
+// from LeetCode - Palindrome
+
+var isPalindrome = function(x) {
+	x = x.toString().split("")
+	console.log("x:", x)
+	let y = Array.from(x).reverse()
+	console.log("y:", y)
+
+	for (let i = 0; i < x.length; i++) {
+		if (x[i] !== y[i]) {
+			return false
+		}
+	}
+	return true
+}
