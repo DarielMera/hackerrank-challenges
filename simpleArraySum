@@ -1,0 +1,7 @@
+function simpleArraySum(ar) {
+    let total = 0;
+    for(let elemNum of ar){
+        total += elemNum
+    }
+return total
+}
