@@ -1,0 +1,15 @@
+// from hacker rank - Birthday Cake Candles
+
+function birthdayCakeCandles(candleArr) {
+const reversedCandleArr = candleArr.sort().reverse()
+const firstElement = reversedCandleArr[0]
+let numberOfTallestCandles = 0
+
+for (let i = 0; i < reversedCandleArr.length; i++) {
+    if(firstElement === reversedCandleArr[i]){
+        numberOfTallestCandles++
+}
+}
+return numberOfTallestCandles
+
+}
